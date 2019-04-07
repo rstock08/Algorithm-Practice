@@ -6,10 +6,11 @@ Practice various algorithmic problems and practice for white board interview que
 <b>Technologies:</b>
    - Java
    - C#
+   - F#
    - C++
    - C
    - Python
    - Ruby
-   - JavaScript
+   - JavaScript   
    
 For any questions please feel free to email me at ReedStock1992@gmail.com!
