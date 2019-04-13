@@ -17,9 +17,14 @@ namespace Practice_Problems
             Console.WriteLine("Array passed: 1, 2, 3, 4, X, 6, 7, 8, 9, 10");
             Console.WriteLine("Missing number: " + missingNumber.missingNumber);
 
+            Console.WriteLine("Problem 2: How do you find the duplicate number on a given integer array?");
+            
+            int[] numbArray = { 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10 };
+            DuplicateNumber duplicateNumber = new DuplicateNumber(numbArray);
 
-
-
+            Console.WriteLine("Array passed: 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10");
+            Console.WriteLine("Using two for loops we can find duplicates in n^2: " + duplicateNumber.findDuplicateLoop);
+            Console.WriteLine("Using one for loop and a hash we can find duplicates in n: " + duplicateNumber.findDuplicateFaster);
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }

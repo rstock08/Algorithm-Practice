@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36B1388F-0C0B-45EA-AE5C-89D113D05493}</ProjectGuid>
+    <ProjectGuid>{7DF75D61-9533-44B8-B5DD-EC520532CD15}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Practice_Problems</RootNamespace>
-    <AssemblyName>Practice-Problems</AssemblyName>
+    <RootNamespace>CS</RootNamespace>
+    <AssemblyName>CS</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DuplicateNumber.cs" />
     <Compile Include="MissingNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
