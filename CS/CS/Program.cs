@@ -26,6 +26,9 @@ namespace Practice_Problems
             Console.WriteLine("Using two for loops we can find duplicates in n^2: " + duplicateNumber.findDuplicateLoop());
             Console.WriteLine("Using one for loop and a hash we can find duplicates in n: " + duplicateNumber.findDuplicateFaster());
 
+            Console.WriteLine("Problem 3: How do you find the largest and smallest number in an unsorted integer array?");
+            Console.WriteLine("By using merge sort we ");
+
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
         }
     }

@@ -13,6 +13,7 @@ namespace Practice_Problems
         public DuplicateNumber(int[] numbArray)
         {
             this.numbArray = numbArray;
+            numbArray.Min();
         }
 
         // Slow - Time: n^2

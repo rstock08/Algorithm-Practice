@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DuplicateNumber.cs" />
+    <Compile Include="HighLowNumber.cs" />
     <Compile Include="MissingNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
