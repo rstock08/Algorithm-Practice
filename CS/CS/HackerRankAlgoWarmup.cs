@@ -95,7 +95,7 @@ namespace CS
         }
 
         // Problem(HackerRank) : https://www.hackerrank.com/challenges/mini-max-sum/problem
-        static void miniMaxSum(int[] arr)
+        public static void MiniMaxSum(int[] arr)
         {
 
             double tot = 0;
@@ -126,6 +126,31 @@ namespace CS
 
 
             Console.WriteLine(min + " " + max);
+        }
+
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/staircase/problem
+        public static void Staircase(int n)
+        {
+            int k = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j <= i; j++)
+                {
+
+                    while (k < n - i - 1)
+                    {
+                        Console.Write(" ");
+
+                        k += 1;
+                    }
+
+                    Console.Write("#");
+
+                }
+                k = 0;
+                Console.WriteLine();
+            }
         }
     }
 }
