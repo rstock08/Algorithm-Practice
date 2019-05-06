@@ -30,7 +30,7 @@ namespace CS
             return abScore;
         }
 
-        //Problem(HackerRank) : https://www.hackerrank.com/challenges/time-conversion/problem
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/time-conversion/problem
         public static string TimeConversion(string s)
         {
             string tempT = "";
@@ -68,7 +68,7 @@ namespace CS
             return s;
         }
 
-        //Problem(HackerRank) : https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/birthday-cake-candles/problem
         public static int BirthdayCakeCandles(int[] ar)
         {
 
@@ -92,6 +92,40 @@ namespace CS
             //Console.Write(dict[dict.Keys.Max()]);
 
             return dict[dict.Keys.Max()];
+        }
+
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/mini-max-sum/problem
+        static void miniMaxSum(int[] arr)
+        {
+
+            double tot = 0;
+            double min = 0;
+            double max = 0;
+            double temp = 0;
+
+            foreach (int number in arr)
+            {
+                tot += number;
+            }
+
+            min = tot;
+
+            foreach (int number in arr)
+            {
+                temp = tot - number;
+
+                if (temp < min)
+                {
+                    min = temp;
+                }
+                if (temp > max)
+                {
+                    max = temp;
+                }
+            }
+
+
+            Console.WriteLine(min + " " + max);
         }
     }
 }
