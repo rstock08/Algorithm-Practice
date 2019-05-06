@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HackerRankAlgoWarmup.cs" />
     <Compile Include="DuplicateNumber.cs" />
     <Compile Include="HighLowNumber.cs" />
     <Compile Include="MissingNumber.cs" />
