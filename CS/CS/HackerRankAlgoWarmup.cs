@@ -30,7 +30,7 @@ namespace CS
             return abScore;
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/time-conversion/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/time-conversion/problem
         public static string TimeConversion(string s)
         {
             string tempT = "";
@@ -68,7 +68,7 @@ namespace CS
             return s;
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/birthday-cake-candles/problem
         public static int BirthdayCakeCandles(int[] ar)
         {
 
@@ -94,7 +94,7 @@ namespace CS
             return dict[dict.Keys.Max()];
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/mini-max-sum/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/mini-max-sum/problem
         public static void MiniMaxSum(int[] arr)
         {
 
@@ -128,7 +128,7 @@ namespace CS
             Console.WriteLine(min + " " + max);
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/staircase/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/staircase/problem
         public static void Staircase(int n)
         {
             int k = 0;
@@ -153,7 +153,7 @@ namespace CS
             }
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/plus-minus/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/plus-minus/problem
         public static void PlusMinus(int[] arr)
         {
             double pos = 0, neg = 0, zer = 0;
@@ -184,7 +184,7 @@ namespace CS
 
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/diagonal-difference/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/diagonal-difference/problem
         public static int DiagonalDifference(int[][] arr)
         {
             int val1 = 0, val2 = 0, dif = 0;
@@ -214,7 +214,7 @@ namespace CS
             return dif;
         }
 
-        // Problem(HackerRank) : https://www.hackerrank.com/challenges/a-very-big-sum/problem
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/a-very-big-sum/problem
         public static long AVeryBigSum(long[] ar)
         {
 
@@ -228,5 +228,87 @@ namespace CS
             return arSum;
         }
 
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/sock-merchant/problem
+        public static int SockMerchant(int n, int[] ar)
+        {
+            int matches = 0;
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+
+            if (n > 1)
+            {
+
+                foreach (int sock in ar)
+                {
+                    if (dict.ContainsKey(sock))
+                    {
+                        dict[sock] += 1;
+                    }
+                    else
+                    {
+                        dict.Add(sock, 1);
+                    }
+                }
+
+                foreach (KeyValuePair<int, int> entry in dict)
+                {
+                    if (entry.Value > 1)
+                    {
+                        matches += (entry.Value / 2);
+                    }
+                }
+
+                return matches;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/simple-array-sum/problem
+        public static int SimpleArraySum(int[] ar)
+        {
+            var total = 0;
+            foreach (int number in ar)
+            {
+                total = total + number;
+            }
+
+            return total;
+
+        }
+
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/counting-valleys/problem
+        public static int CountingValleys(int n, string s)
+        {
+            int valleys = 0;
+            int dCounter = 0;
+
+            if (s.Length > 1)
+            {
+                foreach (char character in s.ToLower())
+                {
+
+                    if (character == 'd')
+                    {
+                        dCounter += 1;
+
+                        if (dCounter == 2)
+                        {
+                            valleys += 1;
+                        }
+                    }
+                    else
+                    {
+                        dCounter = 0;
+                    }
+                }
+                return valleys;
+            }
+            else
+            {
+                return valleys;
+            }
+        }
     }
 }
