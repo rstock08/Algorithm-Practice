@@ -31,16 +31,13 @@ namespace CS
         }
 
         //Problem(HackerRank) : https://www.hackerrank.com/challenges/time-conversion/problem
-        static string timeConversion(string s)
+        public static string TimeConversion(string s)
         {
             string tempT = "";
             int tempVal1 = 0, tempVal2 = 0;
-
             if (s.Contains("AM"))
             {
-
                 s = s.Replace("AM", "");
-
                 if (s.Substring(0, 2).Contains("12"))
                 {
                     s = s.Replace(s.Substring(0, 2), "00");
@@ -48,9 +45,7 @@ namespace CS
             }
             else if (s.Contains("PM"))
             {
-
                 s = s.Replace("PM", "");
-
                 if (s.Substring(0, 2).Contains("12"))
                 {
                     //String stays the same
@@ -60,7 +55,6 @@ namespace CS
                     tempT = s.Substring(0, 2);
                     tempVal1 = Convert.ToInt32(tempT);
                     tempVal2 = tempVal1 + 12;
-
                     if (tempVal1 < 10)
                     {
                         s = s.Replace(s.Substring(0, 2), tempVal2.ToString());
@@ -71,13 +65,33 @@ namespace CS
                     }
                 }
             }
-
-            // Debug
-            //Console.WriteLine(tempT);
-            //Console.WriteLine(tempVal1);
-            //Console.WriteLine(tempVal2);
-
             return s;
+        }
+
+        //Problem(HackerRank) : https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+        public static int BirthdayCakeCandles(int[] ar)
+        {
+
+            int n = ar.Length;
+
+            Dictionary<int, int> dict = new Dictionary<int, int>();
+
+            for (int i = 0; i < n; i++)
+            {
+
+                if (!dict.ContainsKey(ar[i]))
+                {
+                    dict.Add(ar[i], 1);
+                }
+                else
+                {
+                    dict[ar[i]] += 1;
+                }
+            }
+
+            //Console.Write(dict[dict.Keys.Max()]);
+
+            return dict[dict.Keys.Max()];
         }
     }
 }
