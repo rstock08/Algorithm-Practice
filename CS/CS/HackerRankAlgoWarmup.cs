@@ -152,5 +152,81 @@ namespace CS
                 Console.WriteLine();
             }
         }
+
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/plus-minus/problem
+        public static void PlusMinus(int[] arr)
+        {
+            double pos = 0, neg = 0, zer = 0;
+            double n = arr.Length;
+
+            for (int i = 0; i < n; i++)
+            {
+
+                //Console.Write(arr[i]);
+
+                if (arr[i] > 0)
+                {
+                    pos += 1;
+                }
+                else if (arr[i] < 0)
+                {
+                    neg += 1;
+                }
+                else
+                {
+                    zer += 1;
+                }
+            }
+
+            Console.WriteLine("{0:0.000000}", pos / n);
+            Console.WriteLine("{0:0.000000}", neg / n);
+            Console.WriteLine("{0:0.000000}", zer / n);
+
+        }
+
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/diagonal-difference/problem
+        public static int DiagonalDifference(int[][] arr)
+        {
+            int val1 = 0, val2 = 0, dif = 0;
+            int n = arr.GetLength(0);
+            int ai = n - 1;
+
+            // First for loop iterates through the columns
+            for (int i = 0; i < n; i++)
+            {
+
+                // Second for loop iterates through the rows
+                for (int j = 0; j < n; j++)
+                {
+
+                    if (i == j)
+                    {
+                        val1 += arr[i][j];
+                        val2 += arr[ai][j];
+                    }
+                }
+
+                ai -= 1;
+            }
+
+            dif = Math.Abs(val1 - val2);
+
+            return dif;
+        }
+
+        // Problem(HackerRank) : https://www.hackerrank.com/challenges/a-very-big-sum/problem
+        public static long AVeryBigSum(long[] ar)
+        {
+
+            long arSum = 0;
+
+            foreach (long numb in ar)
+            {
+                arSum += numb;
+            }
+
+            return arSum;
+        }
+
     }
 }
