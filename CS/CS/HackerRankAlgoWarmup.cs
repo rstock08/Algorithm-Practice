@@ -310,5 +310,35 @@ namespace CS
                 return valleys;
             }
         }
+
+        // Problem(HackerRank): https://www.hackerrank.com/challenges/grading/problem
+        public static int[] GradingStudents(int[] grades)
+        {
+            /*
+             * Write your code here.
+             */
+
+            int[] adjGrades = new int[grades.Length];
+
+            for (int i = 0; i < grades.Length; i++)
+            {
+                if (grades[i] < 38)
+                {
+                    adjGrades[i] = grades[i];
+                }
+                else if (grades[i] % 5 > 2)
+                {
+                    adjGrades[i] = grades[i] + (5 - grades[i] % 5);
+                    Console.WriteLine(grades[i]);
+                    Console.WriteLine(grades[i] % 5);
+                }
+                else
+                {
+                    adjGrades[i] = grades[i];
+                }
+            }
+
+            return adjGrades;
+        }
     }
 }
